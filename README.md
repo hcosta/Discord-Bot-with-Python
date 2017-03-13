@@ -31,11 +31,11 @@ python test.py
 
 ## 5. Test commands
 Can be send from the discord server or private message
-* !test: Counts user messages
-* !sleep: Sleeps for 5 seconds 
-* !info: Shows sample message 
-* !setnick: Sets profile username
-* !setavatar: Sets profile avatar
+* *!test*: Counts user messages
+* *!sleep*: Sleeps for 5 seconds 
+* *!info*: Shows sample message 
+* *!setnick*: Sets profile username
+* *!setavatar*: Sets profile avatar
 
 # More examples
 Official docs [https://github.com/Rapptz/discord.py/blob/async/examples/]
