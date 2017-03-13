@@ -1,6 +1,10 @@
 import discord
 import asyncio
 
+token = ''
+avatar = './img/kitty.jpg'
+nickname = 'Kitten'
+
 client = discord.Client()
 
 @client.event
@@ -28,19 +32,20 @@ async def on_message(message):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Done sleeping')
 
+    # Show info
+    elif message.content.startswith('!info'):
+        await client.send_message(message.channel, 
+            ':inbox_tray: Yes! :smile: :wave:\n:outbox_tray: No! :smile: :wave:') 
+
     # Set avatar (https://discordapp.com/developers/docs/resources/user)
     elif message.content.startswith('!setavatar'):
-        with open('./img/kitty.jpg', 'rb') as f:
+        with open(avatar, 'rb') as f:
             await client.edit_profile(avatar=f.read())
 
     # Set nickname (https://discordapp.com/developers/docs/resources/user)
     elif message.content.startswith('!setnick'):
-        await client.edit_profile(username="Kitten")
-
-    # Show info
-    elif message.content.startswith('!info'):
-        await client.send_message(message.channel, 
-            ':inbox_tray: Yes! :smile: :wave:\n:outbox_tray: No! :smile: :wave:')     
+        await client.edit_profile(username=nickname)
+    
 
 # This token is just for testing right now, will delete in future
-client.run('')
+client.run(token)
