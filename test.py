@@ -12,6 +12,8 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+  
+    # Sample testing
     if message.content.startswith('!test'):
         counter = 0
         tmp = await client.send_message(message.channel, 'Calculating messages...')
@@ -20,8 +22,25 @@ async def on_message(message):
                 counter += 1
 
         await client.edit_message(tmp, 'You have {} messages.'.format(counter))
+
+    # Sample testing sleep 5 seconds
     elif message.content.startswith('!sleep'):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Done sleeping')
 
-client.run('MjkwOTM1NDI2NTI3NTI2OTEz.C6iKTw.xPbQgtdERslK4kW5JTz0HDt1fSA')
+    # Set avatar (https://discordapp.com/developers/docs/resources/user)
+    elif message.content.startswith('!setavatar'):
+        with open('./img/kitty.jpg', 'rb') as f:
+            await client.edit_profile(avatar=f.read())
+
+    # Set nickname (https://discordapp.com/developers/docs/resources/user)
+    elif message.content.startswith('!setnick'):
+        await client.edit_profile(username="Kitten")
+
+    # Show info
+    elif message.content.startswith('!info'):
+        await client.send_message(message.channel, 
+            ':inbox_tray: Yes! :smile: :wave:\n:outbox_tray: No! :smile: :wave:')     
+
+# This token is just for testing right now, will delete in future
+client.run('')
