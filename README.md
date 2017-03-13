@@ -1,5 +1,7 @@
 # Discord-Bot-with-Python
-Testing Purposes
+![Kitten!!!](./img/readme.png "Kitten!!!")
+
+A simple Discord Bot for testing purposes created with Python 3
 
 ## 1. Set up the bot and enter some servers
 Documentation here [https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token]
@@ -28,6 +30,7 @@ python test.py
 ```
 
 ## 5. Test commands
+Can be send from the discord server or private message
 * !test: Counts user messages
 * !sleep: Sleeps for 5 seconds 
 * !info: Shows sample message 
