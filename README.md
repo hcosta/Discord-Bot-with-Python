@@ -36,3 +36,6 @@ Can be send from the discord server or private message
 * !info: Shows sample message 
 * !setnick: Sets profile username
 * !setavatar: Sets profile avatar
+
+# More examples
+Official docs [https://github.com/Rapptz/discord.py/blob/async/examples/]
