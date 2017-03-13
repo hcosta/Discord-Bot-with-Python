@@ -1,7 +1,7 @@
 # Discord-Bot-with-Python
 Testing Purposes
 
-## 1. Setting up the bot and entering the 
+## 1. Set up the bot and enter some servers
 Documentation here [https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token]
 
 ## 2. Install discord.py (with python 3 as default)
