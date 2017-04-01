@@ -11,7 +11,7 @@ from youtube_dl.utils import DownloadError
 with open('config.yml') as f:
     config = yaml.load(f)
 
-bot = commands.Bot(command_prefix='!ktn ', description='Nyaaaaaaa!')
+bot = commands.Bot(command_prefix='k!', description='Nyaaaaaaa!')
 
 # Eveto inicializador
 @bot.event
@@ -83,6 +83,17 @@ async def joined(member : discord.Member):
     """Anuncia cuando ha entrado alguien"""
     await bot.say('{0.name} ha entrado {0.joined_at}'.format(member))
 
+@bot.command()
+async def setnick(nick : str):
+    await bot.edit_profile(username="DJ_Kitten")
+
+@bot.command()
+async def setavatar():    
+    with open(config['avatar'], 'rb') as f:
+        await bot.edit_profile(avatar=f.read())
+
+
+#### REPRODUCTOR MUSICAL
 
 if not discord.opus.is_loaded():
     discord.opus.load_opus('opus')
@@ -210,10 +221,10 @@ class Music:
         opts = {
             'default_search': 'auto',
             'quiet': True,
-            'format': 'worstaudio[ext=m4a]/worst', #webm[abr>0]/
+            'format': 'bestaudio[ext=m4a]/best',
             'restrictfilenames': True,
             'noplaylist': True,
-            'prefer_ffmpeg': False
+            'prefer_ffmpeg': True
         }
 
         if state.voice is None:
