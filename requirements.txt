@@ -1,3 +1,11 @@
-git+ssh://git@github.com/rapptz/discord.py@async
+discord.py[voice]
 pyyaml
 youtube-dl
+
+# Linux:sudo apt-get install libffi-dev 
+# sudo apt-get install ffmpeg -y
+
+
+# sudo apt-get install libvorbisfile3 libopus0
+#sudo apt-get install libavdevice-dev libavformat-dev libavfilter-dev libavcodec-dev libswscale-dev libavutil-dev
+# sudo apt-get install libav-tools

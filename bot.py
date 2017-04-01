@@ -210,6 +210,10 @@ class Music:
         opts = {
             'default_search': 'auto',
             'quiet': True,
+            'format': 'worstaudio[ext=m4a]/worst', #webm[abr>0]/
+            'restrictfilenames': True,
+            'noplaylist': True,
+            'prefer_ffmpeg': False
         }
 
         if state.voice is None:
